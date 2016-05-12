@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<members>
+
+<member name="T:Microsoft.Kinect.Face.CaptureStatusChangedEventArgs">
+  <summary>Provides data for the CaptureStatusChanged event.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.CaptureStatusChangedEventArgs.PreviousCaptureStatus">
+  <summary>Gets the capture status from before the CaptureStatusChanged event.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrameReference.AcquireFrame">
+  <summary>Gets a container for one frame of high-definition face frame data.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.HighDefinitionFaceFrameReference">
+  <summary>Represents a reference to a high-definition face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameReference.RelativeTime">
+  <summary>Gets the relative time of this frame.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.RectI">
+  <summary>Represents a rectangle with integer coordinates.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.RectI.Bottom">
+  <summary>Gets or sets the bottom.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.RectI.Left">
+  <summary>Gets or sets the left side.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.RectI.Right">
+  <summary>Gets or sets the right side.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.RectI.Top">
+  <summary>Gets or sets the top.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.CollectionStatusChangedEventArgs">
+  <summary>Provides data for the CollectionStatusChanged event.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.CollectionStatusChangedEventArgs.PreviousCollectionStatus">
+  <summary>Gets the collection status from before the CollectionStatusChanged</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceFrameResult">
+  <summary>Represents a face frame result.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.FaceBoundingBoxInColorSpace">
+  <summary>Gets the face bounding box in color space.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.FaceBoundingBoxInInfraredSpace">
+  <summary>Gets the face bounding box in infrared space.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.FaceRotationQuaternion">
+  <summary>Gets the quaternion representing the face rotation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.FaceFrameFeatures">
+  <summary>Gets the face frame features.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.RelativeTime">
+  <summary>Gets the timestamp of the face frame result.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.FacePointsInColorSpace">
+  <summary>Gets the face points in color space.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.FacePointsInInfraredSpace">
+  <summary>Gets the face points in infrared space.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.TrackingId">
+  <summary>Gets the tracking ID of the face frame result.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameResult.FaceProperties">
+  <summary>Gets the face properties.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceFrameArrivedEventArgs">
+  <summary>Arguments for FaceFrameReader events.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameArrivedEventArgs.FrameReference">
+  <summary>Gets the frame reference.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceFrameReader">
+  <summary>Represents a face frame reader.</summary>
+</member>
+<member name="E:Microsoft.Kinect.Face.FaceFrameReader.FrameArrived">
+  <summary>Occurs when a new frame is ready.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Face.FaceFrameReader.PropertyChanged">
+  <summary>Occurs when a property of the FaceFrameReader changes.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceFrameReader.AcquireLatestFrame">
+  <summary>&gt;Gets the most recent frame. It may return null if no frame is available.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceFrameReader.Close">
+  <summary>Closes the FaceFrameReader.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameReader.IsPaused">
+  <summary>Gets or sets a boolean that indicates if the reader is paused.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameReader.FaceFrameSource">
+  <summary>Gets the face frame source.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceAlignment">
+  <summary>Calculates the points of facial features such as eyes, nose, and mouth, from an image.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceAlignment.#ctor">
+  <summary>Creates a new instance of the face alignment class.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceAlignment.AnimationUnits">
+  <summary>Gets the animation units.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceAlignment.FaceBoundingBox">
+  <summary>Gets the bounding box of the face.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceAlignment.FaceOrientation">
+  <summary>Gets a vector indicating the orientation of the face.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceAlignment.HeadPivotPoint">
+  <summary>Gets the pivot point of the head.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceAlignment.Quality">
+  <summary>Gets the quality of the face alignment.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource">
+  <summary>Represents a high-definition face frame source.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.#ctor(WindowsPreview.Kinect.KinectSensor,Windows.Kinect.KinectSensor)">
+  <summary>Initializes a new instance of the HighDefinitionFaceFrameSource class.</summary>
+  <param name="sensor">The Kinect sensor.</param>
+  <param name="sensor">The Kinect sensor.</param>
+</member>
+<member name="E:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.PropertyChanged">
+  <summary>Occurs when a property of the HighDefinitionFaceFrameSource changes.</summary>
+</member>
+<member name="E:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.TrackingIdLost">
+  <summary>Occurs when the tracking ID is lost.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.OpenModelBuilder(Microsoft.Kinect.Face.FaceModelBuilderAttributes)">
+  <summary>Opens a new model builder. The model builder must be disposed.</summary>
+  <param name="enabledAttributes">The attributes of the new face model builder.</param>
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.FeedAndCalculateFrameData(WindowsPreview.Kinect.Body,Windows.Kinect.Body,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)">
+  <summary>TBD</summary>
+  <param name="body">The body to use for the calculation.</param>
+  <param name="body">The body to use for the calculation.</param>
+  <param name="infraredFrameBuffer">The infrared frame buffer to use for the calculation.</param>
+  <param name="colorFrameBuffer">The color frame buffer to use for the calculation.</param>
+  <param name="depthFrameBuffer">The depth frame buffer to use for the calculation.</param>
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.OpenReader">
+  <summary>Opens a new stream reader. This reader must be disposed.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.TrackingQuality">
+  <summary>Gets or sets the tracking quality.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.FaceModel">
+  <summary>Gets the face model for the frame source.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.IsActive">
+  <summary>Gets a boolean that indicates the activity state of the high-definition face frame source.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.IsOnline">
+  <summary>Gets the current activity status of this source.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.IsTrackingIdValid">
+  <summary>Gets a boolean that indicates if the tracking id is valid.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.KinectSensor">
+  <summary>Gets the Kinect sensor.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameSource.TrackingId">
+  <summary>Gets or sets the tracking ID.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceModel">
+  <summary>Represents a face model.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModel.FaceShapeDeformations">
+  <summary>Gets a collection of face shape deformations.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModel.HairColor">
+  <summary>Gets the hair color of the face model.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModel.Scale">
+  <summary>Gets the scaling factor of the face model.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModel.SkinColor">
+  <summary>Gets the skin color of the face model.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModel.TriangleCount">
+  <summary>Gets the number of triangles in the face model.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModel.TriangleIndices">
+  <summary>Gets the collection of triangle indices for the face model.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModel.VertexCount">
+  <summary>Gets the number of vertices in the face model.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceModel.#ctor">
+  <summary>Initializes a new instance of the FaceModel class.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceModel.#ctor(System.Single,Windows.Foundation.Collections.IMapView{Microsoft.Kinect.Face.FaceShapeDeformations,System.Single})">
+  <summary>Initializes a new instance of the face model.</summary>
+  <param name="scale">The scale of the model.</param>
+  <param name="faceShapeDeformations">The face shape deformations of the model.</param>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceFrameReference">
+  <summary>Represents a reference to a FaceFrame.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceModel.CalculateVerticesForAlignment(Microsoft.Kinect.Face.FaceAlignment)">
+  <summary>Calculates vertices for alignment.</summary>
+  <param name="faceAlignment">The face alignment.</param>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceFrameReference.AcquireFrame">
+  <summary>Gets a container for one frame of face frame data.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameReference.RelativeTime">
+  <summary>Gets the relative time of this frame.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.HighDefinitionFaceFrameArrivedEventArgs">
+  <summary>Provides data for the FrameArrived event.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameArrivedEventArgs.FrameReference">
+  <summary>Gets the frame reference.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.TrackingIdLostEventArgs">
+  <summary>Arguments for TrackingIdLost events.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.TrackingIdLostEventArgs.TrackingId">
+  <summary>Gets the tracking ID.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceFrame">
+  <summary>Represents a face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.FaceFrameResult">
+  <summary>Gets the face frame result.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.DepthFrameReference">
+  <summary>Gets a reference to the depth frame associated with the face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.FaceFrameSource">
+  <summary>Gets the face frame source.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.RelativeTime">
+  <summary>Gets the relative time of this frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.InfraredFrameReference">
+  <summary>Gets a reference to the infrared frame associated with the face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.IsTrackingIdValid">
+  <summary>Gets a boolean value indicating if the tracking ID is valid.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.TrackingId">
+  <summary>Gets or sets the tracking ID.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.BodyFrameReference">
+  <summary>Gets a reference to the body frame associated with the face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrame.ColorFrameReference">
+  <summary>Gets a reference to the color frame associated with the face frame.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceFrame.Close">
+  <summary>Closes the FaceFrame and disposes of associated system resources.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceModelData">
+  <summary>Represents face model data.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceModelData.ProduceFaceModel">
+  <summary>Produces a face model.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceModelData.ProduceFaceModelAsync">
+  <summary>Produces a face model asynchronously.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceFrameSource">
+  <summary>Represents a face frame source.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceFrameSource.OpenReader">
+  <summary>Opens a new stream reader. This reader must be disposed.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameSource.FaceFrameFeatures">
+  <summary>Gets the flags that indicate which face frame features data are present in this face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameSource.IsActive">
+  <summary>Gets the current activity status of this source.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameSource.IsTrackingIdValid">
+  <summary>Gets a boolean that indicates if the tracking id is valid.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameSource.KinectSensor">
+  <summary>Gets the Kinect sensor associated with the face frame source.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceFrameSource.TrackingId">
+  <summary>Gets or sets the tracking id.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceFrameSource.#ctor(WindowsPreview.Kinect.KinectSensor,Windows.Kinect.KinectSensor,System.UInt64,Microsoft.Kinect.Face.FaceFrameFeatures)">
+  <summary>Initializes a new instance of the FaceFrameSource class.</summary>
+  <param name="sensor">The Kinect sensor.</param>
+  <param name="sensor">The Kinect sensor.</param>
+  <param name="initialTrackingId">The initial tracking ID.</param>
+  <param name="initialFaceFrameFeatures">The initial face frame features.</param>
+</member>
+<member name="E:Microsoft.Kinect.Face.FaceFrameSource.PropertyChanged">
+  <summary>Occurs when a property of the FaceFrameSource changes.</summary>
+</member>
+<member name="E:Microsoft.Kinect.Face.FaceFrameSource.TrackingIdLost">
+  <summary>Occurs when the tracking ID for the face frame source is lost.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceAlignmentQuality">
+  <summary>Face alignment quality levels.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceAlignmentQuality.High">
+  <summary>Higher quality and higher CPU usage.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceAlignmentQuality.Low">
+  <summary>Lower quality and lower CPU usage.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.HighDefinitionFaceFrame">
+  <summary>Represents a high-definition face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.FaceAlignmentQuality">
+  <summary>Gets the face alignment quality.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.FaceModel">
+  <summary>Gets the face model associated with the high-definition face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.HighDefinitionFaceFrameSource">
+  <summary>Gets the high-definition face frame source.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.InfraredFrameReference">
+  <summary>Gets a reference to the infrared frame associated with the high-definition face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.IsFaceTracked">
+  <summary>Gets a boolean value indicating if the face is tracked.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.IsTrackingIdValid">
+  <summary>Gets a boolean value indicating if the tracking ID is valid.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.RelativeTime">
+  <summary>Gets the relative time of this frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.TrackingId">
+  <summary>Gets the tracking ID.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.BodyFrameReference">
+  <summary>Gets a reference to the body frame associated with the high-definition face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.ColorFrameReference">
+  <summary>Gets a reference to the color frame associated with the high-definition face frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrame.DepthFrameReference">
+  <summary>Gets a reference to the depth frame associated with the high-definitionface frame.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrame.GetAndRefreshFaceAlignmentResult(Microsoft.Kinect.Face.FaceAlignment)">
+  <summary>Refreshes and gets the face alignment results.</summary>
+  <param name="faceAlignmentResults">The face alignment results.</param>
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrame.Close">
+  <summary>Closes the HighDefinitionFaceFrame.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceFrameFeatures">
+  <summary>Flags that indicate the face frame features that are present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.None">
+  <summary>No data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.BoundingBoxInInfraredSpace">
+  <summary>Infrared space bounding box data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.PointsInInfraredSpace">
+  <summary>Infrared space data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.BoundingBoxInColorSpace">
+  <summary>Color space bounding box data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.PointsInColorSpace">
+  <summary>Color space point data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.RotationOrientation">
+  <summary>Rotation orientation data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.Happy">
+  <summary>Happiness data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.RightEyeClosed">
+  <summary>Right eye data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.LeftEyeClosed">
+  <summary>Left eye data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.MouthOpen">
+  <summary>Mouth open data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.MouthMoved">
+  <summary>Mouth movement data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.LookingAway">
+  <summary>Looking away data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.Glasses">
+  <summary>Glasses data is present.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceFrameFeatures.FaceEngagement">
+  <summary>Face engagement data is present.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceModelBuilderAttributes">
+  <summary>Flags that indicate the attributes of a face model builder.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderAttributes.HairColor">
+  <summary>Hair color</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderAttributes.None">
+  <summary>None</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderAttributes.SkinColor">
+  <summary>Skin color</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceModelBuilderCaptureStatus">
+  <summary>Status of the face model builder capture.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCaptureStatus.FaceTooFar">
+  <summary>The face is too far from the camera.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCaptureStatus.FaceTooNear">
+  <summary>The face is too near to the camera.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCaptureStatus.GoodFrameCapture">
+  <summary>The frame capture worked.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCaptureStatus.LostFaceTrack">
+  <summary>The face is no longer tracked.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCaptureStatus.MovingTooFast">
+  <summary>The face is moving too fast.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCaptureStatus.OtherViewsNeeded">
+  <summary>Other views are needed.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCaptureStatus.SystemError">
+  <summary>A system error occured.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.HighDefinitionFaceFrameReader">
+  <summary>Represents a high-definition face frame reader.</summary>
+</member>
+<member name="E:Microsoft.Kinect.Face.HighDefinitionFaceFrameReader.FrameArrived">
+  <summary>Occurs when a new frame is ready.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Face.HighDefinitionFaceFrameReader.PropertyChanged">
+  <summary>Occurs when a property of the HighDefinitionFaceFrameReader changes.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrameReader.AcquireLatestFrame">
+  <summary>&gt;Gets the most recent frame. It may return null if no frame is available.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.HighDefinitionFaceFrameReader.Close">
+  <summary>Closes the HighDefinitionFrameReader.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameReader.HighDefinitionFaceFrameSource">
+  <summary>Gets the high-definition face frame source.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.HighDefinitionFaceFrameReader.IsPaused">
+  <summary>Gets or sets a boolean that indicates if the reader is paused.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceModelBuilderCollectionStatus">
+  <summary>Status of the face model builder collection.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCollectionStatus.Complete">
+  <summary>The collection is complete.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCollectionStatus.FrontViewFramesNeeded">
+  <summary>Frames from the front view are needed.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCollectionStatus.LeftViewsNeeded">
+  <summary>Frames from the left view are needed.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCollectionStatus.MoreFramesNeeded">
+  <summary>More frames are needed.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCollectionStatus.RightViewsNeeded">
+  <summary>Frames from the right view are needed.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceModelBuilderCollectionStatus.TiltedUpViewsNeeded">
+  <summary>Frames from the tilted up view are needed.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FacePointType">
+  <summary>Face point types.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FacePointType.EyeLeft">
+  <summary>Left eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FacePointType.EyeRight">
+  <summary>Right eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FacePointType.MouthCornerLeft">
+  <summary>Left corner of the mouth.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FacePointType.MouthCornerRight">
+  <summary>Right corner of the mouth.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FacePointType.None">
+  <summary>None</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FacePointType.Nose">
+  <summary>Nose</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceProperty">
+  <summary>Values that describe the state of a face.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceProperty.Happy">
+  <summary>The user appears happy.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceProperty.Engaged">
+  <summary>The user appears engaged with the Kinect Sensor.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceProperty.WearingGlasses">
+  <summary>The user is wearing glasses.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceProperty.LeftEyeClosed">
+  <summary>The user's left eye is closed.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceProperty.RightEyeClosed">
+  <summary>The user's right eye is closed.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceProperty.MouthOpen">
+  <summary>The user's mouth is open.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceProperty.MouthMoved">
+  <summary>The user's mouth moved.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceProperty.LookingAway">
+  <summary>The user is looking away.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceModelBuilder">
+  <summary>Represents a face model builder.</summary>
+</member>
+<member name="E:Microsoft.Kinect.Face.FaceModelBuilder.CaptureStatusChanged">
+  <summary>Occurs when the capture status changes.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Face.FaceModelBuilder.PropertyChanged">
+  <summary>Occurs when a property of the FaceModelBuilder changes.</summary>
+</member>
+<member name="E:Microsoft.Kinect.Face.FaceModelBuilder.CollectionStatusChanged">
+  <summary>Occurs when the collection status changes.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceModelBuilder.Close">
+  <summary>Closes the FaceModelBuilder.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Face.FaceModelBuilder.CollectFaceDataAsync">
+  <summary>Collects face data asynchronously.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModelBuilder.CaptureStatus">
+  <summary>Captures the status of the face model builder.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Face.FaceModelBuilder.CollectionStatus">
+  <summary>Gets the status of the face model builder collection.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceShapeAnimations">
+  <summary>Face shape animations.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.JawOpen">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.JawSlideRight">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LeftcheekPuff">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LefteyebrowLowerer">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LefteyeClosed">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LipCornerDepressorLeft">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LipCornerDepressorRight">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LipCornerPullerLeft">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LipCornerPullerRight">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LipPucker">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LipStretcherLeft">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LipStretcherRight">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LowerlipDepressorLeft">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.LowerlipDepressorRight">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.RightcheekPuff">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.RighteyebrowLowerer">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeAnimations.RighteyeClosed">
+  <summary />
+</member>
+<member name="T:Microsoft.Kinect.Face.FaceShapeDeformations">
+  <summary>Face shape deformations.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks00">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks01">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks02">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks04">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks07">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks08">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks10">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks11">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks13">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks14">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks16">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks18">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks19">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks20">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Cheeks25">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Chin01">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Chin02">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Chin03">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Chin04">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Chin05">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes00">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes02">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes03">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes06">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes07">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes08">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes09">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes11">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes16">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes17">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Eyes19">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Forehead00">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Forehead04">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Forehead05">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Forehead06">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask03">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask04">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask07">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask10">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask19">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask20">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask22">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask25">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mask29">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth02">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth07">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth09">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth11">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth13">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth15">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth16">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth17">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth18">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Mouth22">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag01">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag02">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag03">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag05">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag06">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag07">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag09">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag12">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag15">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag27">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.MouthBag36">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose00">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose01">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose02">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose03">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose04">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose05">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose06">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose07">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose08">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose09">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose10">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose13">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose15">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose16">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Nose18">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA01">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA02">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA03">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA04">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA05">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA06">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA07">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA08">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA09">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.PCA10">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Rim07">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Rim20">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Rim21">
+  <summary />
+</member>
+<member name="F:Microsoft.Kinect.Face.FaceShapeDeformations.Rim22">
+  <summary />
+</member>
+<member name="T:Microsoft.Kinect.Face.HighDetailFacePoints">
+  <summary>High-detail face points.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.ChinCenter">
+  <summary>Center of the chin.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.ForeheadCenter">
+  <summary>Center of the forehead.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.Leftcheekbone">
+  <summary>Left cheek bone.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LeftcheekCenter">
+  <summary>Center of the left cheek.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LefteyebrowCenter">
+  <summary>Center of the left eyebrow.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LefteyebrowInner">
+  <summary>Inner left eyebrow.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LefteyebrowOuter">
+  <summary>Outer left eyebrow.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LefteyeInnercorner">
+  <summary>Inner corner of the left eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LefteyeMidbottom">
+  <summary>Middle of the bottom of the left eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LefteyeMidtop">
+  <summary>Middle of the top of the left eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LefteyeOutercorner">
+  <summary>Outer corner of the left eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LowerjawLeftend">
+  <summary>Left end of the lower jaw.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.LowerjawRightend">
+  <summary>Right end of the lower jaw.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.MouthLeftcorner">
+  <summary>Left corner of the mouth.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.MouthLowerlipMidbottom">
+  <summary>Middle of the bottom of the lower lip.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.MouthLowerlipMidtop">
+  <summary>Middle of the top of the lower lip.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.MouthRightcorner">
+  <summary>Right corner of the mouth.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.MouthUpperlipMidbottom">
+  <summary>Middle of the bottom of the upper lip.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.MouthUpperlipMidtop">
+  <summary>Middle of the top of the upper lip.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.NoseBottom">
+  <summary>Bottom of the nose.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.NoseBottomleft">
+  <summary>Bottom left of the nose.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.NoseBottomright">
+  <summary>Bottom right of the nose.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.NoseTip">
+  <summary>Tip of the nose.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.NoseTop">
+  <summary>Top of the nose.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.NoseTopleft">
+  <summary>Top left of the nose.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.NoseTopright">
+  <summary>Top right of the nose.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.Rightcheekbone">
+  <summary>Right cheek bone.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.RightcheekCenter">
+  <summary>Center of the right cheek.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.RighteyebrowCenter">
+  <summary>Center of the right eyeborw.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.RighteyebrowInner">
+  <summary>Inner right eyebrow.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.RighteyebrowOuter">
+  <summary>Outer right eyebrow.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.RighteyeInnercorner">
+  <summary>Inner corner of the right eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.RighteyeMidbottom">
+  <summary>Middle of the bottom of the right eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.RighteyeMidtop">
+  <summary>Middle of the top of the right eye.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Face.HighDetailFacePoints.RighteyeOutercorner">
+  <summary>Outer corner of the right eye.</summary>
+</member></members></doc>

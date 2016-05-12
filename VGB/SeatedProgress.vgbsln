@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GestureBuilderFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SolutionFile>
+		<Header>
+			<Date>2015-11-24</Date>
+			<Time>14:25:37.9929323+08:00</Time>
+			<Version>1</Version>
+			<Type>Solution</Type>
+			<ID>8dc6ebfa-ee5b-4eb0-986a-40410aa93e42</ID>
+		</Header>
+		<Solution_Data>
+			<Files>
+				<Name />
+				<Content>
+					<Items>
+						<File>SeatedProgress/Move.vgbproj</File>
+					</Items>
+					<Items>
+						<File>SeatedProgress/Move.a.vgbproj</File>
+					</Items>
+				</Content>
+			</Files>
+		</Solution_Data>
+		<UI_State />
+		<Attributes />
+	</SolutionFile>
+</GestureBuilderFile>

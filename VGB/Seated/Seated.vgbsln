@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GestureBuilderFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SolutionFile>
+		<Header>
+			<Date>2015-10-16</Date>
+			<Time>14:28:21.6426575+08:00</Time>
+			<Version>1</Version>
+			<Type>Solution</Type>
+			<ID>b479fcfb-492a-4caa-8eb6-c40526080f98</ID>
+		</Header>
+		<Solution_Data>
+			<Files>
+				<Name />
+				<Content>
+					<Items>
+						<File>Seated.vgbproj</File>
+					</Items>
+					<Items>
+						<File>Seated.a.vgbproj</File>
+					</Items>
+					<Items>
+						<File>Stand.vgbproj</File>
+					</Items>
+					<Items>
+						<File>Stand.a.vgbproj</File>
+					</Items>
+				</Content>
+			</Files>
+		</Solution_Data>
+		<UI_State />
+		<Attributes />
+	</SolutionFile>
+</GestureBuilderFile>
