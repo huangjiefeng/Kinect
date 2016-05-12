@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<members>
+<member name="T:Microsoft.Kinect.Toolkit.Input.IPressableModel">
+  <summary>The interface implemented by the PressableModel Kinect Toolkit input element.</summary>
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IPressableModel.Holding">
+  <summary>Occurs when a pressing gesture of a pressable Kinect Toolkit input element is being held.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IPressableModel.PressingStarted">
+  <summary>Occurs when a pressing gesture of a pressable Kinect Toolkit input element has started.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IPressableModel.PressingCompleted">
+  <summary>Occurs when a pressing gesture of a pressable Kinect Toolkit input element has completed.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IPressableModel.PressingUpdated">
+  <summary>Occurs when a pressing gesture of a pressable Kinect Toolkit input element has been updated.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IPressableModel.Tapped">
+  <summary>Occurs when a pressable Kinect Toolkit input element has been tapped.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.ManipulatableModel">
+  <summary>Maintains data and state for a manipulatable Kinect Toolkit input element.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.#ctor(WindowsPreview.Kinect.Input.KinectGestureSettings)">
+  <summary>Initializes a new instance of the ManipulatableModel that maintains data and state for a Kinect Toolkit input element.</summary>
+  <param name="kinectGestureSettings">The Kinect gesture settings to use for the input element.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.#ctor(WindowsPreview.Kinect.Input.KinectGestureSettings,System.Object)">
+  <summary>Initializes a new instance of the ManipulatableModel that maintains data and state for a Kinect Toolkit input element.</summary>
+  <param name="kinectGestureSettings">The Kinect gesture settings to use for the input element.</param>
+  <param name="element">The object that represents the input element.</param>
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.ManipulationCompleted">
+  <summary>Occurs when a manipulation gesture associated with the Kinect Toolkit input element completes.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.ManipulationInertiaStarting">
+  <summary>Occurs when the user has completed a manipulation gesture associated with the Kinect Toolkit input element and the inertial phase of the gesture starts.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.ManipulationStarted">
+  <summary>Occurs when a manipulation gesture associated with the Kinect Toolkit input element starts.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.ManipulationUpdated">
+  <summary>Occurs when a manipulation gesture associated with the Kinect Toolkit input element is updated.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.Attach(WindowsPreview.Kinect.Input.KinectGestureRecognizer,WindowsPreview.Kinect.Input.KinectGestureSettings)">
+  <summary>Attaches the Kinect Toolkit input element to the the specified KinectGestureRecognizer Class.</summary>
+  <param name="gestureRecognizer">The KinectGestureRecognizer Class from which the input element should be detached.</param>
+  <param name="scrollGestureSettings">The settings to be used by the gesture recognizer.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.CompleteGesture">
+  <summary>Finalizes a gesture.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.Detach(WindowsPreview.Kinect.Input.KinectGestureRecognizer)">
+  <summary>Detaches the Kinect Toolkit input element from the specified KinectGestureRecognizer Class.</summary>
+  <param name="gestureRecognizer">The KinectGestureRecognizer Class from which the input element should be detached.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.Initialize(System.Single,System.Single,System.Single,System.Single)">
+  <summary>Initializes the extent and client size of the Kinect Toolkit input element.</summary>
+  <param name="extentWidth">The extent width.</param>
+  <param name="extentHeight">The extent height.</param>
+  <param name="clientWidth">The client width.</param>
+  <param name="clientHeight">The client height.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.ProcessInertia">
+  <summary>Performs inertia calculations and raises associated inertia events.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.ProcessPointerMove(WindowsPreview.Kinect.Input.KinectPointerPoint,Windows.Foundation.Collections.IMap{System.UInt32,Microsoft.Kinect.Toolkit.Input.HitTestResult,Microsoft.Kinect.Toolkit.Input.HitTestResult},System.Boolean)">
+  <summary>Processes the movement of the pointer associated with the Kinect Toolkit input element.</summary>
+  <param name="pointerPoint">The KinectPointerPoint Class associated with the pointer move event.</param>
+  <param name="captureMap">A map of KinectPointerPoint.PointerId Property values to objects indicating the hit test results associated with each pointer point.</param>
+  <param name="forceEndPress">A boolean value indicating whether an ongoing press gesture should be ended.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.ScrollByOffset(System.Single,System.Single)">
+  <summary>Scrolls the Kinect Toolkit input object by the specified offset, in pixels.</summary>
+  <param name="x">The offset distance along the X axis.</param>
+  <param name="y">The offset distance along the Y axis.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.WindowResized(Windows.Foundation.Rect)">
+  <summary>Updates the size of the window associated with the Kinect Toolkie input.</summary>
+  <param name="windowBounds">The updated window bounds.</param>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.Element">
+  <summary>Gets the object that represents the Kinect Toolkit input element.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.CapturedPointerId">
+  <summary>Gets the identifier of the KinectPointerPoint Class that has captured the Kinect Toolkit input element.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.GestureRecognizer">
+  <summary>Gets the KinectGestureRecognizer Class associated with the Kinect Toolkit input element.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.HasCaptureChanged">
+  <summary>Gets a boolean value indicating if the capture status of the Kinect Toolkit input element has changed.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.HasCapture">
+  <summary>Gets a boolean value indicating if the Kinect Toolkit input element is currently captured.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.IsInInertialManipulation">
+  <summary>Gets a boolean value indicating whether the Kinect Toolkit input element has an intertial manipulation in progress.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.IsManipulatable">
+  <summary>Gets a boolean value indicating whether the Kinect Toolkit input element supports manipulation gestures.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.ManipulatableModel.ScrollOffset">
+  <summary>Gets the current scroll offset of the Kinect Toolkit input element.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.PressableModel">
+  <summary>Maintains data and state for a pressable Kinect Toolkit input element.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.PressableModel.#ctor(WindowsPreview.Kinect.Input.KinectGestureSettings,System.Object)">
+  <summary>Initializes a new instance of the PressableModel class.</summary>
+  <param name="kinectGestureSettings">The Kinect gesture settings to use for the input element.</param>
+  <param name="element">The object that represents the input element.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.PressableModel.#ctor(WindowsPreview.Kinect.Input.KinectGestureSettings)">
+  <summary>Initializes a new instance of the PressableModel class.</summary>
+  <param name="kinectGestureSettings">The Kinect gesture settings to use for the input element.</param>
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.PressableModel.PressingCompleted">
+  <summary>Occurs when a press gesture associated with the Kinect Toolkit input element completes.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.PressableModel.Holding">
+  <summary>Occurs when a press gesture associated with the Kinect Toolkit input element is being held.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.PressableModel.PressingStarted">
+  <summary>Occurs when a press gesture associated with the Kinect Toolkit input element starts.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.PressableModel.PressingUpdated">
+  <summary>Occurs when a press gesture associated with the Kinect Toolkit input element is updated.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.PressableModel.Tapped">
+  <summary>Occurs when the Kinect Toolkit input element is tapped.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.PressableModel.CompleteGesture">
+  <summary>Finalizes a gesture.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.PressableModel.Attach(WindowsPreview.Kinect.Input.KinectGestureRecognizer,WindowsPreview.Kinect.Input.KinectGestureSettings)">
+  <summary>Attaches the Kinect Toolkit input element to the the specified KinectGestureRecognizer Class.</summary>
+  <param name="gestureRecognizer">The KinectGestureRecognizer Class from which the input element should be detached.</param>
+  <param name="PressableModelGestureSettings">The settings to be used by the gesture recognizer.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.PressableModel.Detach(WindowsPreview.Kinect.Input.KinectGestureRecognizer)">
+  <summary>Detaches the Kinect Toolkit input element from the specified KinectGestureRecognizer Class.</summary>
+  <param name="gestureRecognizer">The KinectGestureRecognizer Class from which the input element should be detached.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.PressableModel.SetLocation(System.Single,System.Single,System.Single,System.Single,System.Single)">
+  <summary>Sets the initial position of the pressable Kinect Toolkit input element.</summary>
+  <param name="x">The X coordinate of the element.</param>
+  <param name="y">The Y coordinate of the element.</param>
+  <param name="width">The width of the element.</param>
+  <param name="height">The height of the element.</param>
+  <param name="hittableMarginWidth">The width of the margin that is hittable on all sides of the element.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.PressableModel.ProcessPointerMove(WindowsPreview.Kinect.Input.KinectPointerPoint,Windows.Foundation.Collections.IMap{System.UInt32,Microsoft.Kinect.Toolkit.Input.HitTestResult,Microsoft.Kinect.Toolkit.Input.HitTestResult},System.Boolean)">
+  <summary>Processes the movement of the pointer associated with the Kinect Toolkit input element.</summary>
+  <param name="pointerPoint">The KinectPointerPoint Class associated with the pointer move event.</param>
+  <param name="captureMap">A map of KinectPointerPoint.PointerId Property values to objects indicating the hit test results associated with each pointer point.</param>
+  <param name="forceEndPress">A boolean value indicating whether an ongoing press gesture should be ended.</param>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.CapturedPointerId">
+  <summary>Gets the identifier of the KinectPointerPoint Class that has captured the Kinect Toolkit input element.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.GestureRecognizer">
+  <summary>Gets the KinectGestureRecognizer Class associated with the Kinect Toolkit input element.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.PressableModel.SetLocation(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+  <summary>Sets the initial position of the pressable Kinect Toolkit input element.</summary>
+  <param name="x">The X coordinate of the element.</param>
+  <param name="y">The Y coordinate of the element.</param>
+  <param name="width">The width of the element.</param>
+  <param name="height">The height of the element.</param>
+  <param name="hittableMarginLeft">The width of the margin that is hittable on the left side of the element.</param>
+  <param name="hittableMarginTop">The width of the margin that is hittable on the top side of the element.</param>
+  <param name="hittableMarginRight">The width of the margin that is hittable on the right side of the element.</param>
+  <param name="hittableMarginBottom">The width of the margin that is hittable on the bottom side of the element.</param>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.HasCaptureChanged">
+  <summary>Gets a boolean value indicating if the capture status of the Kinect Toolkit input element has changed.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.Element">
+  <summary>Gets the object that represents the Kinect Toolkit input element.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.HasCapture">
+  <summary>Gets a boolean value indicating if the Kinect Toolkit input element is currently captured.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.HoldProgress">
+  <summary>Gets a floating point value indicating the progress of a held press gesture.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.IsHolding">
+  <summary>Gets a boolean value indicating whether the Kinect Toolkit input element has a press gesture currently being held.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.IsManipulatable">
+  <summary>Gets a boolean value indicating whether the Kinect Toolkit input element supports manipulation gestures.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.PressableModel.IsPressingDown">
+  <summary>Gets a boolean value indicating whether the Kinect Toolkit input element has a pressing down gesture in progress.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.CursorState">
+  <summary>The state of a Kinect Toolkit cursor.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Toolkit.Input.CursorState.Gripping">
+  <summary>The cursor is gripping.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Toolkit.Input.CursorState.Normal">
+  <summary>The cursor is normal.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Toolkit.Input.CursorState.PressDown">
+  <summary>The cursor is in a press down gesture.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Toolkit.Input.CursorState.PressHold">
+  <summary>The cursor is holding a press gesture.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Toolkit.Input.CursorState.Pressing">
+  <summary>The cursor is in a press gesture.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.CursorModel">
+  <summary>Maintains the data and state for a Kinect cursor.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorModel.#ctor(WindowsPreview.Kinect.Input.HandType,Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition)">
+  <summary>Creates a new instance of the CursorModel class.</summary>
+  <param name="handType">The hand type associated with the cursor.</param>
+  <param name="cursorSpriteSheetDefinition">The sprite sheet definition for the cursor.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorModel.Close">
+  <summary>Disposes of the object and associated resources.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorModel.StartTimeBasedAnimation">
+  <summary>Starts the cursor's time-based sprite animation.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorModel.Tick">
+  <summary>Increments the current frames of cursor's sprite animation.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorModel.Update(Windows.Foundation.Point,WindowsPreview.Kinect.Input.KinectPointerPoint,Microsoft.Kinect.Toolkit.Input.PressableModel,Microsoft.Kinect.Toolkit.Input.ManipulatableModel)">
+  <summary>Updates the position and state of the cursor.</summary>
+  <param name="pointInWindowCoordinates">The position of the cursor, in window coordinates.</param>
+  <param name="kinectPointerPoint">The KinectPointerPoint Class associated with the cursor.</param>
+  <param name="pressCapturedElement">An object representing a UI element that supports press gestures. This value will be null if the captured element does not support press gestures.</param>
+  <param name="manipulatableCapturedElement">An object representing a UI element that supports manipulation gestures. This value will be null if the captured element does not support manipulation gestures.</param>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.ClampedPressExtent">
+  <summary>Gets the extent of a clamped press gesture.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.CurrentBackgroundFrame">
+  <summary>Gets the current frame of the background sprite animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.CurrentForegroundFrame">
+  <summary>Gets the current frame of the foreground sprite animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.CursorSpriteSheetDefinition">
+  <summary>Gets an object that defines the format of the sprite sheet associated with the cursor.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.CursorState">
+  <summary>Gets a value indicating the current state of the cursor.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.HoldProgress">
+  <summary>Gets a value indicating the progress of a hold gesture.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.HandType">
+  <summary>Gets a value indicating the type of the hand associated with the cursor.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.IsAnimationComplete">
+  <summary>Gets a value indicating if the cursor animation is complete.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.PointerId">
+  <summary>Gets the identifier of the KinectPointerPoint Class associated with the cursor.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.Position">
+  <summary>Gets the current position of the cursor.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorModel.PressExtent">
+  <summary>Gets the extent of a press gesture.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition">
+  <summary>Defines the format of a sprite sheet used for Kinect cursor animations.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.#ctor(Windows.Foundation.Uri,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+  <summary>Initializes a new instance of the CursorSpriteSheetDefinition class.</summary>
+  <param name="imageUri">The URI of the sprite sheet image.</param>
+  <param name="columns">The number of columns in the sprite sheet.</param>
+  <param name="rows">The number of rows in the sprite sheet.</param>
+  <param name="width">The width of a single sprite frame in the sprite sheet.</param>
+  <param name="height">The height of a single sprite frame in the sprite sheet.</param>
+  <param name="pressDownStartFrame">The start frame within the sprite sheet of the foreground press down animation.</param>
+  <param name="pressDownEndFrame">The final frame within the sprite sheet of the foreground press down animation.</param>
+  <param name="pressingStartFrame">The start frame within the sprite sheet of the foreground animation.</param>
+  <param name="pressingEndFrame">The final frame within the sprite sheet of the foreground animation.</param>
+  <param name="pressHoldStartFrame">The start frame within the sprite sheet of the background press and hold animation.</param>
+  <param name="pressHoldEndFrame">The end frame within the sprite sheet of the background press and hold animation.</param>
+  <param name="grippingStartFrame">The start frame within the sprite sheet of the foreground gripping animation.</param>
+  <param name="grippingEndFrame">The final frame within the sprite sheet of the foreground gripping animation.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.#ctor(Windows.Foundation.Uri,System.Int32,System.Int32,System.Int32,System.Int32)">
+  <summary>Initializes a new instance of the CursorSpriteSheetDefinition class.</summary>
+  <param name="imageUri">The URI of the sprite sheet image.</param>
+  <param name="columns">The number of columns in the sprite sheet.</param>
+  <param name="rows">The number of rows in the sprite sheet.</param>
+  <param name="width">The width of a single sprite frame in the sprite sheet.</param>
+  <param name="height">The height of a single sprite frame in the sprite sheet.</param>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.Columns">
+  <summary>Gets the number of columns in the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.GrippingForegroundFinalFrame">
+  <summary>Gets the final frame within the sprite sheet of the foreground gripping animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.GrippingForegroundStartFrame">
+  <summary>Gets the start frame within the sprite sheet of the foreground gripping animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.ImageUri">
+  <summary>Gets the URI of the sprite sheet image.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.PressDownForegroundFinalFrame">
+  <summary>Gets the final frame within the sprite sheet of the foreground press down animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.PressDownForegroundStartFrame">
+  <summary>Gets the start frame within the sprite sheet of the foreground press down animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.PressHoldBackgroundStartFrame">
+  <summary>Gets the start frame within the sprite sheet of the background press and hold animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.PressHoldBackgroundFinalFrame">
+  <summary>Gets the final frame within the sprite sheet of the background press and hold animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.PressHoldForegroundFinalFrame">
+  <summary>Gets the final frame within the sprite sheet of the foreground press and hold animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.PressHoldForegroundStartFrame">
+  <summary>Gets the start frame within the sprite sheet of the foreground press and hold animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.PressingForegroundFinalFrame">
+  <summary>Gets the final frame within the sprite sheet of the foreground pressing animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.PressingForegroundStartFrame">
+  <summary>Gets the start frame within the sprite sheet of the foreground animation.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.Rows">
+  <summary>Gets the number of rows in the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.SpriteHeight">
+  <summary>Gets the height of a single sprite frame in the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition.SpriteWidth">
+  <summary>Gets the width of a single sprite frame in the sprite sheet.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.CursorViewModel">
+  <summary>Represents the presentation logic and state of a Kinect cursor.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorViewModel.#ctor(Microsoft.Kinect.Toolkit.Input.CursorModel)">
+  <summary>Initializes a new instance of the CursorViewModel class.</summary>
+  <param name="cursorModel">The CursorModel associated with this CursorViewModel.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.CursorViewModel.Close">
+  <summary>Disposes of the object and associated resources.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.Model">
+  <summary>Gets the CursorModel Class associated with the CursorViewModel.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.OriginPositionX">
+  <summary>Gets the X coordinate of the origin of the sprite, in pixels, within a sprite frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.OriginPositionY">
+  <summary>Gets the Y coordinate of the origin of the sprite, in pixels, within a sprite frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.ScaleTransformX">
+  <summary>Gets the horizontal scale transform of the sprite.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetBackgroundColumn">
+  <summary>Gets the column of the current background sprite frame within the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetBackgroundIndex">
+  <summary>Gets the index within the sprite sheet of the current background sprite frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetBackgroundRow">
+  <summary>Gets the row of the current background sprite frame within the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetBackgroundX">
+  <summary>Gets the X coordinate, in pixels, of the current background sprite frame within the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetBackgroundY">
+  <summary>Gets the Y coordinate, in pixels, of the current background sprite frame within the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetForegroundColumn">
+  <summary>Gets the column of the current foreground sprite frame within the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetForegroundIndex">
+  <summary>Gets the index within the sprite sheet of the current foreground sprite frame.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.TintColor">
+  <summary>Gets or sets the tint color of a Kinect cursor.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetForegroundRow">
+  <summary>Gets the row of the current foreground sprite frame within the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetForegroundX">
+  <summary>Gets the X coordinate, in pixels, of the current foreground sprite frame within the sprite sheet.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.CursorViewModel.SpriteSheetForegroundY">
+  <summary>Gets the Y coordinate, in pixels, of the current foreground sprite frame within the sprite sheet.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.HitTestResult.#ctor(Microsoft.Kinect.Toolkit.Input.PressableModel,Windows.Foundation.Collections.IVector{Microsoft.Kinect.Toolkit.Input.ManipulatableModel})">
+  <summary>Initializes a new instance of the HitTestResult class.</summary>
+  <param name="firstKinectAwareElement">The first PressableModel object associated with a hit test.</param>
+  <param name="manipulationAwareElements">The list of ManipulatableModel objects associated with a hit test.</param>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.HitTestResult">
+  <summary>Stores the first PressableModel object and all ManipulatableModel objects associated with a hit test.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.HitTestResult.Empty">
+  <summary>Gets an empty instance of the HitTestResult class.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.HitTestResult.FirstKinectAwareElement">
+  <summary>Gets or sets the first PressableModel object associated with a hit test.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.HitTestResult.ManipulationAwareElements">
+  <summary>Gets or sets the list of ManipulatableModel objects associated with a hit test.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.InputPointerManager">
+  <summary>Handles the routing of KinectPointerPoint Class objects to the correct KinectGestureRecognizer Class objects and keeps track of the currently captured Kinect Tookit input elements.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.InputPointerManager.KinectEngagementManager">
+  <summary>Gets the IKinectEngagementManager object associated with the input pointer manager.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.#ctor(WindowsPreview.Kinect.KinectSensor)">
+  <summary>Initializes a new instance of the InputPointerManager class.</summary>
+  <param name="kinectSensor">The Kinect sensor associated with the input pointer manager.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.#ctor">
+  <summary>Initializes a new instance of the InputPointerManager class.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.ProcessInertia">
+  <summary>Instructs the input pointer manager to process gesture interia.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.SetKinectOnePersonManualEngagement(Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager)">
+  <summary>Instructs the IKinectEngagementManager Interface to track one body/hand pair that is manually specified by the application as currently engaged.</summary>
+  <param name="kinectEngagementManager">The engagement manager for which the engagement model will be set.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.SetKinectOnePersonSystemEngagement">
+  <summary>Instructs the IKinectEngagementManager Interface to track one body/hand pair that are dynamically determined by the system as currently engaged.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.SetKinectTwoPersonManualEngagement(Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager)">
+  <summary>Instructs the IKinectEngagementManager Interface to track two body/hand pairs that are manually specified by the application as currently engaged.</summary>
+  <param name="kinectEngagementManager">The engagement manager for which the engagement model will be set.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.SetKinectTwoPersonSystemEngagement">
+  <summary>Instructs the IKinectEngagementManager Interface to track two body/hand pairs that are dynamically determined by the system as currently engaged.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.TransformInputPointerCoordinatesToWindowCoordinates(Windows.Foundation.Point,Windows.Foundation.Rect)">
+  <summary>Transforms a pointer coordinate that is normalized between 0 and 1.0 into a pixel-based window coordinate.</summary>
+  <param name="inputPointerPoint">The point to transform.</param>
+  <param name="windowBounds">The window bounds to use for the transform.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.TransformWindowCoordinatesToInputPointerCoordinates(Windows.Foundation.Point,Windows.Foundation.Rect)">
+  <summary>Transforms a pixel-based window coordinate into a pointer coordinate that is normalized between 0 and 1.0.</summary>
+  <param name="windowPoint">The point to transform.</param>
+  <param name="windowBounds">The window bounds to use for the transform.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.Update">
+  <summary>Updates the data in the input pointer manager for the current frame.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.Close">
+  <summary>Disposes of the object and associated resources.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.CompleteGestures(System.UInt32)">
+  <summary>Completes all in-progress gestures associated with the specified KinectPointerPoint Class.</summary>
+  <param name="pointerId">The identifier of the KinectPointerPoint Class object for which the gestures should be completed.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.CompleteGestures">
+  <summary>Completes all in-progress gestures and clears the map of captured elements.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.CompleteGesture(System.UInt32,Microsoft.Kinect.Toolkit.Input.IInputModel)">
+  <summary>Completes a gesture associated with the specified KinectPointerPoint Class and Kinect Toolkit input element.</summary>
+  <param name="pointerId">The identifier of the KinectPointerPoint Class object for which the gesture should be completed.</param>
+  <param name="model">The Kinect Toolkit input element for the gesture should be completed.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.GetCapturedInputModel(System.UInt32)">
+  <summary>Gets the HitTestResult object containing the captured Kinect Tookit input elements associated with the specified KinectPointerPoint Class.</summary>
+  <param name="pointerId">The identifier of the KinectPointerPoint Class for which captured input elements should be retrieved.</param>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.InputPointerManager.HandlePointerAsCursor(WindowsPreview.Kinect.Input.KinectPointerPoint,Windows.Foundation.Rect,Microsoft.Kinect.Toolkit.Input.HitTestResult)">
+  <summary>Instructs the input pointer manager to handle the pointer as a cursor.</summary>
+  <param name="kinectPointerPoint">The pointer to use as a cursor.</param>
+  <param name="bounds">The region whithin which the cursor is confined.</param>
+  <param name="hitTestResult">The HitTestResult which will be updated with the input elements capture by the pointer.</param>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager">
+  <summary>The interface implemented by a Kinect engagement manager.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager.EngagedBodyHandPairsChanged">
+  <summary>Gets a value indicating whether the body/hand pairs that are currently engaged have changed.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager.StartManaging">
+  <summary>Requests the engagement manager to start managing the engagement of body/hand pairs.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager.StopManaging">
+  <summary>Requests the engagement manager to stop managing the engagement of body/hand pairs.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager.KinectManualEngagedHands">
+  <summary>Gets the list of the body/hand pairs that have been manually set as engaged.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.IInputModel">
+  <summary>The base interface implemented by the ManipulatableModel and PressableModel Kinect Toolkit input elements.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.IInputModel.HasCaptureChanged">
+  <summary>Gets a value indicating whether the capture status of the Kinect Toolkit input element has changed.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.IInputModel.HasCapture">
+  <summary>Gets an boolean value indicating whether the Kinect Toolkit input element has been captured with a gesture.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.IInputModel.IsManipulatable">
+  <summary>Gets a value indicating whether the associated Kinect Toolkit input element supports manipulation gestures.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.IInputModel.CapturedPointerId">
+  <summary>Gets the identifier of the KinectPointerPoint Class with which the Kinect Toolkit input element was captured.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.IInputModel.Element">
+  <summary>Gets the object that represents the Kinect Toolkit input element.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Toolkit.Input.IInputModel.GestureRecognizer">
+  <summary>Gets or sets the KinectGestureRecognizer Class object associated with the Kinect Toolkit input element.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.IInputModel.CompleteGesture">
+  <summary>Completes the gesture associated with Kinect Toolkit input element.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Toolkit.Input.IManipulatableModel">
+  <summary>The interface implemented by the ManipulatableModel Kinect Toolkit input element.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Toolkit.Input.IInputModel.ProcessPointerMove(WindowsPreview.Kinect.Input.KinectPointerPoint,Windows.Foundation.Collections.IMap{System.UInt32,Microsoft.Kinect.Toolkit.Input.HitTestResult,Microsoft.Kinect.Toolkit.Input.HitTestResult},System.Boolean)">
+  <summary>Processes the movement of the pointer associated with the Kinect Toolkit input element.</summary>
+  <param name="pointerPoint">The KinectPointerPoint Class associated with the pointer move event.</param>
+  <param name="captureMap">A map of KinectPointerPoint.PointerId Property values to objects indicating the hit test results associated with each pointer point.</param>
+  <param name="forceEndPress">A boolean value indicating whether an ongoing press gesture should be ended.</param>
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IManipulatableModel.ManipulationInertiaStarting">
+  <summary>Occurs when the user has finished a manipulation gesture of a manipulatable Kinect Toolkit input element and the inertial phase of the gesture has begun.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IManipulatableModel.ManipulationStarted">
+  <summary>Occurs when a manipulation gesture of a manipulatable Kinect Toolkit input element has started.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IManipulatableModel.ManipulationUpdated">
+  <summary>Occurs when the manipulation status of a manipulatable Kinect Toolkit input element has changed.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+<member name="E:Microsoft.Kinect.Toolkit.Input.IManipulatableModel.ManipulationCompleted">
+  <summary>Occurs when a manipulation gesture of a manipulatable Kinect Toolkit input element has completed.</summary>
+  <param name="" />
+  <param name="" />
+</member>
+</members></doc>

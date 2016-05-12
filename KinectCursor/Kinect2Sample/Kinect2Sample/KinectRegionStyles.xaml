@@ -1,0 +1,39 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Kinect2Sample"
+    xmlns:k="using:Microsoft.Kinect.Xaml.Controls">
+
+    <ExponentialEase x:Key="VisualStateEasingFunction" Exponent="7" />
+
+    <Style TargetType="k:KinectRegion">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="k:KinectRegion">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness=
+                            "{TemplateBinding BorderThickness}"
+                        >
+                        <Grid>
+                            <ContentPresenter x:Name="contentHolder" />
+
+                            <!-- only change from default KinectRegion
+                             style, is the addition of a user viewer 
+                            under cursor layer,
+                                 but above content -->
+                            <k:KinectUserViewer Height="100" 
+                                Width="121"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top" />
+
+                            <Canvas x:Name="cursorRenderingLayer" 
+                                Background="{x:Null}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

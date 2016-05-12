@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GestureBuilderFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ProjectFile>
+		<Header>
+			<Date>2015-11-23</Date>
+			<Time>10:08:27.8471797+08:00</Time>
+			<Version>5</Version>
+			<Type>RFRProgress</Type>
+			<Function>
+				<Type>Training</Type>
+				<ProjectAttribute Name="Progress_Left" Type="FLOAT" />
+			</Function>
+			<ID>7d75ba77-bd6c-4fa0-afac-5b60c56fc67d</ID>
+		</Header>
+		<Project_Data>
+			<Files>
+				<Name />
+				<Content>
+					<Items>
+						<File>C:/Users/User/Documents/Kinect Studio/Repository/20151123_020414_00.vgbclip</File>
+					</Items>
+					<Items>
+						<File>C:/Users/User/Documents/Kinect Studio/Repository/20151123_020502_00.vgbclip</File>
+					</Items>
+				</Content>
+			</Files>
+		</Project_Data>
+		<UI_State />
+		<Attributes>
+			<Items xsi:type="BoolAttribute" Name="Use Rotation Variant Feature" Value="false" />
+			<Items xsi:type="IntAttribute" Name="Number of Trees" Value="50" MaxValue="100" MinValue="1" />
+			<Items xsi:type="IntAttribute" Name="Max Tree Depth" Value="50" MaxValue="100" MinValue="10" />
+			<Items xsi:type="FloatAttribute" Name="Cluster Threshold" Value="0.3" MaxValue="1" MinValue="0" />
+			<Items xsi:type="FloatAttribute" Name="Weight Factor" Value="0.2" MinValue="0" />
+			<Items xsi:type="BoolAttribute" Name="Use Hands Data" Value="false" />
+			<Items xsi:type="BoolAttribute" Name="Ignore Left Arm" Value="false" />
+			<Items xsi:type="BoolAttribute" Name="Ignore Right Arm" Value="false" />
+			<Items xsi:type="BoolAttribute" Name="Ignore Lower Body" Value="true" />
+		</Attributes>
+	</ProjectFile>
+</GestureBuilderFile>

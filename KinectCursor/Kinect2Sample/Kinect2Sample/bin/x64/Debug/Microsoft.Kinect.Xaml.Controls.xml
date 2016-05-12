@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?><doc><members>
+<member name="T:Microsoft.Kinect.Xaml.Controls.IKinectControl">
+  <summary>The interface implemented by Kinect controls.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.IKinectControl.CreateController(Microsoft.Kinect.Toolkit.Input.IInputModel,Microsoft.Kinect.Xaml.Controls.KinectRegion)">
+  <summary>Creates a IKinectController object with the specified input model and Kinect region.</summary>
+  <param name="inputModel">The input model.</param>
+  <param name="kinectRegion">The Kinect region.</param>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.IKinectControl.IsManipulatable">
+  <summary>Gets a boolean value indicating whether the control receives manipulation gestures.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.IKinectControl.IsPressable">
+  <summary>Gets a boolean value indicating whether the control receives press gestures.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Xaml.Controls.IKinectController">
+  <summary>The interface implemented by a Kinect controller.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.IKinectController.Element">
+  <summary>Gets the XAML framework element associated with the IKinectController.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Xaml.Controls.IKinectManipulatableController">
+  <summary>The interface implemented by a manipulatable Kinect control.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.IKinectManipulatableController.ManipulatableInputModel">
+  <summary>Gets the model that maintains data and state for a manipulatable Kinect Toolkit input element.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Xaml.Controls.IKinectPressableController">
+  <summary>The interface implemented by a pressable Kinect control.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.IKinectPressableController.PressableInputModel">
+  <summary>Gets the model that maintains data and state for a pressable Kinect Toolkit input element.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Xaml.Controls.KinectRegion">
+  <summary>Represents a XAML control which provides a Kinect hand cursor and interactivity with elements contained within the KinectRegion.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.#ctor">
+  <summary>Initializes a new instance of the KinectRegion class.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.GetIsPressTarget(Windows.UI.Xaml.DependencyObject)">
+  <summary>Gets a value indicating if the control is a press target.</summary>
+  <param name="obj">The dependency object for which the value is queried.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.GetIsCursorVisible(System.UInt32)">
+  <summary>Gets a value indicating whether the cursor is visible.</summary>
+  <param name="pointerId">The pointer ID associated with the cursor.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.GetKinectPressInset(Windows.UI.Xaml.DependencyObject)">
+  <summary>Gets the thickness of the inset border displayed during a press gesture.</summary>
+  <param name="obj">The dependency oject for which the thickness should be retrieved.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.GetManipulationProgress(System.UInt32)">
+  <summary>Gets a value indicating the current progress of a manipulation gesture.</summary>
+  <param name="pointerId">The pointer ID associated with the manipulation gesture.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.SetIsCursorVisible(System.UInt32,System.Boolean)">
+  <summary>Sets a value indicating whether the cursor is visible.</summary>
+  <param name="pointerId">The ID of the pointer for which visibility is being set.</param>
+  <param name="isCursorVisible">A boolean value indicating whether the cursor is visible.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.SetIsPressTarget(Windows.UI.Xaml.DependencyObject,System.Boolean)">
+  <summary>Sets a value indicating whether the control is a press target.</summary>
+  <param name="obj">The dependency object on which the property should be set.</param>
+  <param name="value">A boolean value indicating whether the control is a press target.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.SetKinectOnePersonManualEngagement(Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager)">
+  <summary>Instructs the region to track one body/hand pair that is specified by the application as currently engaged.</summary>
+  <param name="kinectEngagementManager">The Kinect engagement manager.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.SetKinectOnePersonSystemEngagement">
+  <summary>Instructs the region to track one body/hand pair that is dynamically determined by the system as currently engaged.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.SetKinectPressInset(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.Thickness)">
+  <summary>Sets the thickness of the inset border displayed during a press gesture.</summary>
+  <param name="obj">The dependency object on which the property should be set.</param>
+  <param name="value">The thickness of the inset.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.SetKinectTwoPersonManualEngagement(Microsoft.Kinect.Toolkit.Input.IKinectEngagementManager)">
+  <summary>Instructs the region to track two body/hand pairs that are specified by the application as currently engaged.</summary>
+  <param name="kinectEngagementManager">The Kinect engagement manager.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.SetKinectTwoPersonSystemEngagement">
+  <summary>Instructs the region to track two body/hand pairs that are dynamically determined by the system as currently engaged.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectRegion.SetManipulationProgress(System.UInt32,Microsoft.Kinect.Xaml.Controls.ManipulationProgress)">
+  <summary>Sets the manipulation progress for the KinectRegion.</summary>
+  <param name="pointerId">The ID of the KinectPointerPoint Class associated with the manipulation.</param>
+  <param name="flags">Flags indicating the progress of the manipulation.</param>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.Bounds">
+  <summary>Gets the bounds of the control.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.CursorSpriteSheetDefinition">
+  <summary>Gets the cursor sprite sheet definition for the control.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.DefaultKinectSound">
+  <summary>Gets the default sounds for the control.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.InputPointerManager">
+  <summary>Gets the InputPointerManager associated with the control.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.DefaultSpriteSheet">
+  <summary>Gets the default sprite sheet for the control.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.IsKinectSoundEnabled">
+  <summary>Gets or sets a value indicating whether Kinect sound is enabled.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.IsPressTargetProperty">
+  <summary>Identifies the IsPressTarget dependency property.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.KinectControllerProperty">
+  <summary>Identifies the KinectController dependency property.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.KinectEngagementManager">
+  <summary>Gets the Kinect engagement manager associated with the control.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.KinectPressInsetProperty">
+  <summary>Idenitifies the KinectPressInset dependency property.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectRegion.KinectSoundDefinition">
+  <summary>Gets or sets the KinectSoundDefinition object for the control.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Xaml.Controls.KinectSoundDefinition">
+  <summary>Specifies the sounds to be used for Kinect XAML controls.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectSoundDefinition.#ctor(Windows.Foundation.Uri,Windows.Foundation.Uri)">
+  <summary>Initializes a new instance of the KinectSoundDefinition class.</summary>
+  <param name="pressedSoundUri">The URI of the sound for the press gesture.</param>
+  <param name="tappedSoundUri">The URI of the sound for the tap gesture.</param>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectSoundDefinition.PressSoundUri">
+  <summary>Gets the URI of the sound for the press gesture.</summary>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectSoundDefinition.TappedSoundUri">
+  <summary>Gets the URI of the sound for the tap gesture.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Xaml.Controls.SpriteSheet">
+  <summary>Represents a sprite sheet user control</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.SpriteSheet.#ctor">
+  <summary>Initializes a new instance of the SpriteSheet class.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.SpriteSheet.Connect(System.Int32,System.Object)">
+  <summary>Attaches events and names to compiled content.</summary>
+  <param name="connectionId">An identifier token to distinguish calls.</param>
+  <param name="target">The target to connect events and names to.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.SpriteSheet.InitializeComponent">
+  <summary>Loads the compiled page of the component.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.SpriteSheet.SetScaleX(System.Single)">
+  <summary>Sets the horizontal scale of the sprite sheet.</summary>
+  <param name="scaleX">The horizontal scale of the sprite sheet.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.SpriteSheet.SetSpriteSheetDefinition(Microsoft.Kinect.Toolkit.Input.CursorSpriteSheetDefinition)">
+  <summary>Sets the sprite sheet definition for the sprite sheet.</summary>
+  <param name="cursorSpriteSheetDefinition">The sprite sheet definition.</param>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.SpriteSheet.SetTranslation(System.Single,System.Single)">
+  <summary>Sets the translation of the sprite sheet.</summary>
+  <param name="x">The translation in the X direction.</param>
+  <param name="y">The translation in the Y direction.</param>
+</member>
+<member name="T:Microsoft.Kinect.Xaml.Controls.KinectUserViewer">
+  <summary>Represents a XAML control that displays a body and hand that is currently tracked by the Kinect sensor.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectUserViewer.#ctor">
+  <summary>Initializes a new instance of the KinectUserViewer class.</summary>
+</member>
+<member name="M:Microsoft.Kinect.Xaml.Controls.KinectUserViewer.UpdateEngagement(System.UInt64,WindowsPreview.Kinect.Input.HandType)">
+  <summary>Sets the tracking ID of the body and the hand type of the user that should be tracked as engaged.</summary>
+  <param name="trackingID">The ID of the body that should be tracked as engaged.</param>
+  <param name="handType">The hand type that should be tracked as engaged.</param>
+</member>
+<member name="P:Microsoft.Kinect.Xaml.Controls.KinectUserViewer.KinectSensor">
+  <summary>Gets or sets the Kinect sensor associated with the control.</summary>
+</member>
+<member name="T:Microsoft.Kinect.Xaml.Controls.ManipulationProgress">
+  <summary>Represents the progress of a manipulation.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Xaml.Controls.ManipulationProgress.VerticalScrollDone">
+  <summary>A boolean value indicating if a vertical scroll is done.</summary>
+</member>
+<member name="F:Microsoft.Kinect.Xaml.Controls.ManipulationProgress.HorizontalScrollDone">
+  <summary>A boolean value indicating if a horizontal scroll is done.</summary>
+</member>
+</members></doc>
