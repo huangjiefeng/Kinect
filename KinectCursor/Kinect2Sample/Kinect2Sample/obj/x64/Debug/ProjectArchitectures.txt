@@ -1,1 +1,0 @@
-D:\Kinect\模拟鼠标\Kinect2Sample\Kinect2Sample\Kinect2Sample.csproj;x64
